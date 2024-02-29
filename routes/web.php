@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
-
+use App\Http\Controllers\ListBarangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +31,4 @@ Route::prefix('admin')->group(function () {
         return 'admin users';
     });
 });
+Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
