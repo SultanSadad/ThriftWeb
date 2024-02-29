@@ -26,8 +26,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return 'admin dashboard';
     });
-});
 
-Route::get('/users', function (){
-    return 'admin user';
+    Route::get('/users', function () {
+        return 'admin users';
+    });
 });
