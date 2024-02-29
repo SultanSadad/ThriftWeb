@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
 use App\Http\Controllers\ListBarangController;
+use App\Http\Controllers\NotifikasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +33,5 @@ Route::prefix('admin')->group(function () {
     });
 });
 Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
+
+Route::get('/notification', [NotifikasiController::class, 'showNotification']);
