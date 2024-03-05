@@ -32,6 +32,9 @@ Route::prefix('admin')->group(function () {
         return 'admin users';
     });
 });
-Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
 
 Route::get('/notification', [NotifikasiController::class, 'showNotification']);
+
+use App\Http\Controllers\ListAditController;
+
+Route::get('/ListAdit', [ListAditController::class, 'tampilkan'])->name('list_adit');
