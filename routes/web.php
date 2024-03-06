@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
+use App\Http\Controllers\ItemController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,10 @@ use App\Http\Controllers\HomeController; // Perhatikan penggunaan huruf besar pa
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/login', 
+    [LoginController::class, 'FormLogin']
+         )->name('login.form');
