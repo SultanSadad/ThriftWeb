@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
 use App\Http\Controllers\ListBarangController;
-use App\Http\Controllers\NotifikasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +37,7 @@ Route::get('/notification', [NotifikasiController::class, 'showNotification']);
 use App\Http\Controllers\ListAditController;
 
 Route::get('/ListAdit', [ListAditController::class, 'tampilkan'])->name('list_adit');
+
+use App\Http\Controllers\NotifikasiController;
+
+Route::get('/notifikasi', [NotifikasiController::class, 'tampilkan']);

@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification</title>
+    <title>Data Notifikasi</title>
     <style>
-        .notification {
-            background-color: #f2f2f2;
-            padding: 20px;
-            margin: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
-    <div class="notification">
-        <h2>Notification</h2>
-        <p>This is a notification message.</p>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pesan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($data as $notifikasi)
+            <tr>
+                <td>{{ $notifikasi['id'] }}</td>
+                <td>{{ $notifikasi['pesan'] }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 </html>
