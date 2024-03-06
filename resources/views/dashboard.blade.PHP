@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-$image_path = "/ThriftWeb/resources/views/img.png";
-?>
-
-
 
 <head>
   <meta charset="UTF-8">
@@ -38,14 +33,14 @@ $image_path = "/ThriftWeb/resources/views/img.png";
     }
 
     .search {
-      display: flex;
+      display:
       align-items: center;
     }
 
     input[type="text"] {
-      width: 500px; 
+      width: 500px;
       border-radius: 12px;
-      margin-right: 400px;
+      margin-right: 450px;
       padding: 5px;
     }
 
@@ -57,33 +52,44 @@ $image_path = "/ThriftWeb/resources/views/img.png";
       padding: 8px 15px;
       font-size: 16px;
       cursor: pointer;
-      shape-outside: margin-box;
     }
 
     .login-button:hover {
       background-color: #223a89;
+    }
+
+    .dashboard-content {
+      margin: 20px;
+      text-align: center;
+    }
+
+    hr {
+      height: 3px;
+      width: 80%;
+      background-color: aliceblue;
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="col-4">
-    <a href="#" style="margin-left: 40px; margin-right: 30px;">Metamorphosis</a>
-  </div>
-    <input type="text" placeholder="Cari item" style="height: 15px;">
-    <button class="login-button">Login</button>
-    <button class="login-button">Register</button>
+  <nav>
+    <div class="col-4">
+      <a href="#" style="margin-left: 40px; margin-right: ;">Metamorphosis</a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Cari item" style="height: 15px;">
+      <button class="login-button">Login</button>
+      <button class="login-button">Register</button>
+    </div>
+  </nav>
 
-</nav>
-<div>
-  <center><h1></h1></center>
-</div>
-<div style="margin-left: 20px;">
-    <center><img src="img.png" style="height:250px; margin-top: 45px;" alt=""></center>
-    <hr style="height: 3px; width: 1200px; background-color: aliceblue;">
-</div>
+  <div class="dashboard-content">
+    <h1>Welcome to the Dashboard</h1>
+    <p>Your dashboard content goes here.</p>
+    <hr>
+  </div>
+
 </body>
 
 </html>

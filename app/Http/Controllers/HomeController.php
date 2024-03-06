@@ -8,23 +8,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-<<<<<<< HEAD
-        return view('home');
-=======
-        $data = [
-            'nama' => 'doraemon',
-            'pekerjaan' => 'Developer',
-        ];
-        return view ('home')->with($data);
->>>>>>> origin/main
+        // Isi dari method index
     }
 
     public function contact()
     {
-<<<<<<< HEAD
-        return view('contact');
-=======
-        return view ('contact');
->>>>>>> origin/main
+        // Isi dari method contact
     }
 }
