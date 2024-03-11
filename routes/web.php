@@ -41,3 +41,7 @@ Route::get('/ListAdit', [ListAditController::class, 'tampilkan'])->name('list_ad
 use App\Http\Controllers\NotifikasiController;
 
 Route::get('/notifikasi', [NotifikasiController::class, 'tampilkan']);
+
+Route::get('/gambar', function () {
+    return view('gambar');
+});
