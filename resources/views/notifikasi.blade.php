@@ -2,49 +2,33 @@
 <html>
 <head>
     <title>Data Notifikasi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            border: 1px solid #ddd;
-            background-color: #fff;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link href="https://cdn.tailwindcss.com/3.4.1/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.1">
+    <link rel="stylesheet" href="{{ asset('styles/style104.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/tailwind3.4.1.js') }}">
 </head>
-<body>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Pesan</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($data as $notifikasi)
-            <tr>
-                <td>{{ $notifikasi['id'] }}</td>
-                <td>{{ $notifikasi['pesan'] }}</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+<body class="bg-gray-100">
+    <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+            <div class="relative bg-white shadow-lg sm:rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pesan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        @foreach($data as $notifikasi)
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ $notifikasi['id'] }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ $notifikasi['pesan'] }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
