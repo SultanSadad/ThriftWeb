@@ -23,10 +23,8 @@ class ListBarangController extends Controller
     }
 
     public function tampilkan(){
-        $data = 
-
-        $this->getData();
-        return view('list_barang', compact('data'));
+        $data = $this->getData();
+        return view('List_barang', compact('data'));
     }
     
 }

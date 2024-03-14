@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ItemController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
+use App\Http\Controllers\ListBarangController; // Perhatikan penggunaan huruf besar pada kata 'Use' yang diubah menjadi 'use'
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ListSepatuController;
+use App\Http\Controllers\List_barangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +17,19 @@ use App\Http\Controllers\ItemController; // Perhatikan penggunaan huruf besar pa
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login',[LoginController::class,'tampilkan']);
+
+Route::get('/images118', function() {
+    return view('images118');
 });
 
-Route::get('/login', 
-    [LoginController::class, 'FormLogin']
-         )->name('login.form');
+Route::get('/listsepatu', function() {
+    return view('listsepatu');
+});
+
+Route::get('/list_barang',[ListBarangController::class,'tampilkan']);
+
+
+
+
+
