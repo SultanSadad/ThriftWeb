@@ -14,10 +14,16 @@ use App\Http\Controllers\ItemController; // Perhatikan penggunaan huruf besar pa
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/login', 
     [LoginController::class, 'FormLogin']
          )->name('login.form');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/user/{id}', function ($id) {
+    return 'User dengan ID ' . $id;
+});
