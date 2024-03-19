@@ -3,9 +3,8 @@
 <head>
     <title>Data Notifikasi</title>
     <link href="https://cdn.tailwindcss.com/3.4.1/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.1">
     <link rel="stylesheet" href="{{ asset('styles/style104.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/tailwind3.4.1.js') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
     <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
