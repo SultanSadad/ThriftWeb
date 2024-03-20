@@ -45,3 +45,8 @@ Route::get('/notifikasi', [NotifikasiController::class, 'tampilkan']);
 Route::get('/gambar', function () {
     return view('gambar');
 });
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/list-product', [ProductController::class, 'index']);
+
