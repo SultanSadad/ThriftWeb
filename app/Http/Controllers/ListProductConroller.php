@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class ListProductConroller extends Controller
 {
     public function tampilkan(){
-        return view('Login');
+        return view('list_product');
     }
 }

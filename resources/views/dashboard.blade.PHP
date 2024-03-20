@@ -4,92 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    nav {
-      background-color: #253d8a;
-      overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-family: rozha, one;
-      font-size: 25px;
-      font-weight: 800;
-    }
-
-    nav a:hover {
-      background-color: #223a89;
-      color: black;
-    }
-
-    .search {
-      display:
-      align-items: center;
-    }
-
-    input[type="text"] {
-      width: 500px;
-      border-radius: 12px;
-      margin-right: 450px;
-      padding: 5px;
-    }
-
-    .login-button {
-      background-color: #223a89;
-      color: white;
-      border: white;
-      border-radius: 10px;
-      padding: 8px 15px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .login-button:hover {
-      background-color: #223a89;
-    }
-
-    .dashboard-content {
-      margin: 20px;
-      text-align: center;
-    }
-
-    hr {
-      height: 3px;
-      width: 80%;
-      background-color: aliceblue;
-    }
   </style>
 </head>
 
 <body>
+  <nav class="bg-blue-950 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-white font-semibold text-xl">
+        <a href="#">Metamorphosis</a>
+      </div>
 
-  <nav>
-    <div class="col-4">
-      <a href="#" style="margin-left: 40px; margin-right: ;">Metamorphosis</a>
-    </div>
-    <div class="search">
-      <input type="text" placeholder="Cari item" style="height: 15px;">
-      <button class="login-button">Login</button>
-      <button class="login-button">Register</button>
+      <div class="flex space-x-4">
+        <a href="#" class="text-white hover:text-gray-300">Login</a>
+        <a href="#" class="text-white hover:text-gray-300">Register</a>
+      </div>
     </div>
   </nav>
-
-  <div class="dashboard-content">
-    <h1>Welcome to the Dashboard</h1>
-    <p>Your dashboard content goes here.</p>
-    <hr>
+  <center> <h1 class="text-gray-700 font-bold text-4xl mt-10">Metamorphosis</h1></center>
+  <div class="flex min-h-screen flex-col items-center justify-center">
+    <div class="bg-white shadow-md rounded px-7 pt-0 pb-12 mb-0 flex flex-col w-full max-w-md">
+      <div class="mb-4">
+        <h1 class="text-gray-700 font-bold text-2xl">Masuk</h1>
+      </div>
+      <form action="#">
+        <div class="mb-4">
+          <label for="email" class="text-gray-700 font-bold">Email</label>
+          <input type="email" id="email" name="email"
+            class="border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="mb-6">
+          <label for="password" class="text-gray-700 font-bold">Password</label>
+          <input type="password" id="password" name="password"
+            class="border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <div class="flex items-center justify-between">
+          <button type="submit"
+            class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Masuk</button>
+          <P>Belum punya akun? <a href="" class="font-bold">Daftar</a></P>
+        </div>
+      </form>
+    </div>
   </div>
-
 </body>
 
 </html>
